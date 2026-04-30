@@ -4,3 +4,18 @@
 *.db
 .beads-credential-key
 .beads/
+
+# Node / Bun
+node_modules/
+
+# Build output
+dist/
+.vite/
+*.tsbuildinfo
+
+# Test artifacts
+playwright-report/
+test-results/
+
+# OS
+.DS_Store
