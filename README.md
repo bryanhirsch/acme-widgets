@@ -1,15 +1,15 @@
 # Acme Widgets
 
 Example website for Software Factory Intensive training. Live at
-**<https://bryanhirsch.github.io/acme-widgets/>**.
+**<https://bryanhirsch.github.io/acme-widgets-private/>**.
 
 ## Quick Start
 
 Prerequisites: [Bun](https://bun.sh) `>=1.2`.
 
 ```bash
-git clone git@github.com:bryanhirsch/acme-widgets.git
-cd acme-widgets
+git clone git@github.com:bryanhirsch/acme-widgets-private.git
+cd acme-widgets-private
 bun install
 bun run dev          # http://localhost:5173
 ```
