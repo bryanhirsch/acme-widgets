@@ -5,6 +5,9 @@
 .beads-credential-key
 .beads/
 
+# Manual backups of dolt db for evolving versions of workshop
+.backups
+
 # Node / Bun
 node_modules/
 
