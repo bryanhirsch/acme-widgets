@@ -5,6 +5,7 @@ import {
   useRouteError,
   type RouteObject,
 } from 'react-router';
+import Footer from './components/Footer';
 import TopNav from './components/TopNav';
 import Home from './pages/Home';
 import Orders from './pages/Orders';
@@ -52,6 +53,7 @@ function RootLayout() {
       <main id="main" tabIndex={-1} className="outline-none">
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 }
