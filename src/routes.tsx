@@ -9,6 +9,11 @@ import Footer from './components/Footer';
 import TopNav from './components/TopNav';
 import Home from './pages/Home';
 import Orders from './pages/Orders';
+import Pricing, {
+  pricingLoader,
+  PricingHydrateFallback,
+  PricingRouteError,
+} from './pages/Pricing';
 import Widgets, {
   widgetsLoader,
   WidgetsHydrateFallback,
@@ -80,6 +85,13 @@ const routes: RouteObject[] = [
         path: 'orders',
         element: <Orders />,
         errorElement: <RouteError />,
+      },
+      {
+        path: 'pricing',
+        element: <Pricing />,
+        loader: pricingLoader,
+        HydrateFallback: PricingHydrateFallback,
+        errorElement: <PricingRouteError />,
       },
     ],
   },
