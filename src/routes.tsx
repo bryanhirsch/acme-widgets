@@ -7,6 +7,7 @@ import {
 } from 'react-router';
 import Footer from './components/Footer';
 import TopNav from './components/TopNav';
+import Feedback from './pages/Feedback';
 import Home from './pages/Home';
 import Orders from './pages/Orders';
 import Pricing, {
@@ -92,6 +93,11 @@ const routes: RouteObject[] = [
         loader: pricingLoader,
         HydrateFallback: PricingHydrateFallback,
         errorElement: <PricingRouteError />,
+      },
+      {
+        path: 'feedback',
+        element: <Feedback />,
+        errorElement: <RouteError />,
       },
     ],
   },
