@@ -26,7 +26,7 @@ the bottom, or delete rows you no longer want on the site.
 | `description`     | One-sentence description shown on the catalog card.                |
 | `number_in_stock` | A whole number. The card shows "N in stock" (or "Only 9 left").    |
 | `price`           | A number in dollars. Decimals OK (`19.99`). No `$` sign.           |
-| `icon`            | Filename of the SVG icon (e.g. `brass-widget.svg`). Required.      |
+| `icon`            | Preset key for the card's visual (e.g. `brass-widget.svg`). Required. See "How `icon` picks a visual" below. |
 | `categories`      | Tags separated by `;` (e.g. `everyday;artisanal;gift`).            |
 
 **Do not rename the column headers.** The site reads columns by name;
@@ -37,6 +37,34 @@ need a label change, ask an engineer.
 A row missing `type` or `icon` is skipped on the site (other rows
 still appear) — useful if you want to draft a row in place before
 filling it out.
+
+## How `icon` picks a visual
+
+Each widget card has a "hero" panel — the colored background, label,
+and cog at the top of the card. The `icon` cell decides which one a
+row gets. The match is by filename:
+
+- `icon` is `brass-widget.svg` → the site looks for a preset file at
+  [`src/components/presets/brass-widget.tsx`](../../src/components/presets)
+  and renders that.
+- `icon` is anything the site doesn't recognize → the card falls back
+  to the generic "Standard Issue" preset. The row still appears; only
+  the visual is generic.
+
+The full list of presets a producer can pick from is whatever lives in
+[`src/components/presets/`](../../src/components/presets). The
+filenames in that directory (minus the `.tsx` extension, plus `.svg`)
+are the valid `icon` values. Files starting with `_` (like
+`_standard.tsx`) are internal helpers and are not pickable from the
+sheet.
+
+> **Adding a new widget design is a code change, not a sheet change.**
+> A producer with a new visual idea works with an engineer to add a
+> file under `src/components/presets/`. Once that file is merged, the
+> producer can reference its filename in the sheet's `icon` column and
+> the new design appears on the site. The decision to organize presets
+> this way is captured in
+> [`../decision-records/0003.ADR.SELF_REGISTERING_PRESETS.md`](../decision-records/0003.ADR.SELF_REGISTERING_PRESETS.md).
 
 ## How fast does an edit go live?
 
