@@ -12,11 +12,12 @@ docs/
   current/             # Authoritative docs for current state of code on the default branch (main)
   future/              # Proposed changes, drafted as ADRs awaiting approval
   roadmap → future     # Symlink for anyone looking for "the roadmap"
+  plans   → future     # Symlink for anyone looking for "plans"
   decision-records/    # ADRs in flight or landed, moved here on a branch where the ADR is being implemented
   human-review-logs/   # Per-PR checklists for human functional review
 ```
 
-## Lifecycle of an architecture decision
+## Lifecycle of an arcchitecture decision
 
 1. **Draft.** A proposed change is written as an ADR in `docs/future/`,
    numbered sequentially (e.g. `0001.ADR.TECH_STACK.md`).
@@ -31,6 +32,14 @@ docs/
    context. It does not change again. New decisions get new ADRs.
 5. **Reflect current state.** The same PR updates `docs/current/` to describe
    the new state of the codebase.
+
+## Lifecycle of plans
+
+1. **Planned.** Project plans with multiple related files are created and refined
+   in `docs/future/<name-of-project>`
+3. **Implemented.** Once implementation is complete, these documents aren's
+   "plans" anymore. Remove them from `docs/future/`. Where appropriate,
+   update `docs/current/`.
 
 ## What goes where
 
