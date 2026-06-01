@@ -13,6 +13,7 @@ docs/
   future/              # Proposed changes, drafted as ADRs awaiting approval
   roadmap → future     # Symlink for anyone looking for "the roadmap"
   plans   → future     # Symlink for anyone looking for "plans"
+  archive/             # If you need to keep outdated docs for future reference, put them here
   decision-records/    # ADRs in flight or landed, moved here on a branch where the ADR is being implemented
 ```
 
