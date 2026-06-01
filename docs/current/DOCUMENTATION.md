@@ -44,7 +44,7 @@ docs/
 
 | Directory                | Stable? | Purpose                                                   |
 |--------------------------|---------|-----------------------------------------------------------|
-| `docs/current/`          | Living  | What is true on the default branch right now.             |
+| `docs/current/`          | Living  | What is true right now.             |
 | `docs/future/`           | Living  | What we are considering.                                  |
 | `docs/decision-records/` | Frozen upon merge to main | ADRs get moved here as part of implementation.            |
 
