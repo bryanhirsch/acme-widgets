@@ -1,13 +1,3 @@
-
-# Beads / Dolt files (added by bd init)
-.dolt/
-*.db
-.beads-credential-key
-.beads/
-
-# Manual backups of dolt db for evolving versions of workshop
-.backups
-
 # Node / Bun
 node_modules/
 
